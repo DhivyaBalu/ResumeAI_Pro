@@ -16,11 +16,10 @@ with st.sidebar:
     mock_interview = st.button("Mock Interview")
 
 # Main Content - Resume Output
-st.title("Resume and Job Posting Analyzer")
-resume_container = st.empty()  # Placeholder for displaying the result
+st.title("AI Resume Optimizer")
+resume_container = st.empty()
 builder = ResumeBuilder()
 
-# Process Submission
 if submit_button:
     if job_url and uploaded_resume:
         job_data = builder.fetch_job_data(job_url)

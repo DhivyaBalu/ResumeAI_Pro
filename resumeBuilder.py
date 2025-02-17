@@ -86,7 +86,7 @@ class ResumeBuilder:
             """
         )
 
-        chain_prompt = prompt | self.llm
+        chain_prompt = prompt | llm
         formatted_resume = chain_prompt.invoke(input={'resume_text': resume_text})
 
         return formatted_resume.content
